@@ -1,4 +1,69 @@
+/*
+  Colors:
+    #707070 Standard Gray
+    #3FF63B Neon Green
+    #3BF6EA Neon Blue
+    #F63BEE Neon Pink
+    #F63B3B Neon Red
+    #F6EE3B Neon Yellow
+    #F6953B Neon Orange
+*/
+
 body {
   background-color: #0F0F0F;
   color: #707070;
+  font-family: 'Montserrat';
+  font-size: 16px;
+}
+
+.radio-container-wrapper {
+  text-align: center;
+}
+
+.radio-container {
+  position: relative;
+  display: inline-block;
+  width: 15em;
+  height: 5em;
+}
+
+.radio-left {
+  position: absolute;
+  left: 0em;
+  top: 0em;
+  font-size: 64px;
+}
+
+.radio-top {
+  position: absolute;
+  left: 1em;
+  top: 2em;
+  font-size: 24px;
+}
+
+.radio-bottom {
+  position: absolute;
+  left: .7em;
+  top: 1.95em;
+  font-size: 32px;
+}
+
+#radio-text-david,
+#radio-text-design {
+  color: #3FF63B;
+}
+
+#radio-text-dev,
+#radio-text-teaching {
+  color: #F6953B;
+}
+
+#radio-text-entre,
+#radio-text-motorcycles {
+  color: #F6EE3B;
+}
+
+#radio-text-code,
+#radio-text-gaming {
+  color: #3BF6EA;
 }
