@@ -9,7 +9,14 @@
     #F6953B Neon Orange
 */
 
+html {
+  height: 100%;
+}
+
 body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
   background-color: #0F0F0F;
   color: #707070;
   font-family: 'Montserrat';
@@ -17,35 +24,48 @@ body {
 }
 
 .radio-container-wrapper {
-  text-align: center;
+  /* Center vertical/horizontal */
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
 }
 
 .radio-container {
   position: relative;
   display: inline-block;
-  width: 15em;
+  width: 17em;
   height: 5em;
 }
 
 .radio-left {
   position: absolute;
   left: 0em;
-  top: 0em;
+  top: -1em;
   font-size: 64px;
+
+  /* border: solid 1px #0FF; */
 }
 
 .radio-top {
   position: absolute;
-  left: 1em;
-  top: 2em;
+  left: .8em;
+  top: -.6em;
   font-size: 24px;
+
+  /* border: solid 1px #F0F; */
 }
 
 .radio-bottom {
   position: absolute;
-  left: .7em;
-  top: 1.95em;
+  left: .57em;
+  top: -.05em;
   font-size: 32px;
+
+  /* border: solid 1px #FF0; */
 }
 
 #radio-text-david,
