@@ -17,10 +17,30 @@ body {
   position: relative;
   min-height: 100%;
   margin: 0;
-  background-color: #0F0F0F;
-  color: #707070;
+  
+  color: #9F9F9F;
   font-family: 'Montserrat';
   font-size: 16px;
+
+  background-color: #0F0F0F;
+  background-image: url(https://imagizer.imageshack.com/v2/xq90/924/ebaadZ.png);
+  background-repeat: no-repeat;
+  background-blend-mode: color-dodge;
+  background-size: 40%;
+  background-position: center;
+
+}
+
+.monogram {
+  position: relative;
+}
+.monogram::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 256px; height: 256px;
+  background-image: url();
+  filter: grayscale(100%);
 }
 
 .radio-container-wrapper {
