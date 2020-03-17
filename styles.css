@@ -22,13 +22,13 @@ body {
   font-family: 'Montserrat';
   font-size: 16px;
 
+  /* Monogram */
   background-color: #0F0F0F;
   background-image: url(https://imagizer.imageshack.com/v2/xq90/924/ebaadZ.png);
   background-repeat: no-repeat;
   background-blend-mode: color-dodge;
   background-size: 40%;
   background-position: center;
-
 }
 
 .navigation-container-wrapper {
@@ -58,7 +58,6 @@ body {
   transform: translate(-19px, -13px);
 }
 
-/* WIP */
 .blog-button {
   position: absolute;
   left: -150px;
@@ -68,7 +67,6 @@ body {
   transform: translate(-90px, 85px);
 }
 
-/* WIP */
 .contact-button {
   position: absolute;
   left: -150px;
@@ -82,34 +80,43 @@ body {
   position: absolute;
 }
 
-.portfolio-container {
-  position: absolute;
-  left: -150px;
-  top: -110px;
-  width: 64px;
-  height: 64px;
-
-  fill: #333333;
-}
-
+.portfolio-button:hover svg path, .portfolio-button:hover,
+.blog-button:hover svg path, .blog-button:hover,
+.contact-button:hover svg path, .contact-button:hover,
 .portfolio-container:hover svg path, .portfolio-container:hover,
 .blog-container:hover svg path, .blog-container:hover,
 .contact-container:hover svg path, .contact-container:hover {
   fill: #9F9F9F;
 }
 
+#portfolio:hover,
+#blog:hover,
+#contact:hover {
+  border: solid 3px #9F9F9F;
+}
+
+.portfolio-container {
+  position: absolute;
+  left: 16px;
+  top: 10px;
+  width: 64px;
+  height: 64px;
+
+  fill: #333333;
+}
+
 .blog-container {
   position: absolute;
-  left: -220px;
-  top: -10px;
+  left: 18px;
+  top: 10px;
 
   fill: #333333;
 }
 
 .contact-container {
   position: absolute;
-  left: -155px;
-  top: 90px;
+  left: 10px;
+  top: 5px;
 
   fill: #333333;
 }
