@@ -31,6 +31,61 @@ body {
 
 }
 
+/* div:hover svg path, div:hover {
+  fill:red;
+  color:red;
+} */
+
+.navigation-container-wrapper {
+  /* Center vertical/horizontal */
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.navigation-container {
+  position: absolute;
+}
+
+.portfolio-container {
+  position: absolute;
+  left: -150px;
+  top: -110px;
+
+  fill: #333333;
+}
+
+.portfolio-container:hover svg path, .portfolio-container:hover {
+  fill: #9F9F9F;
+}
+
+.blog-container:hover svg path, .blog-container:hover {
+  fill: #9F9F9F;
+}
+
+.blog-container {
+  position: absolute;
+  left: -220px;
+  top: -10px;
+
+  fill: #333333;
+}
+
+.contact-container:hover svg path, .contact-container:hover {
+  fill: #9F9F9F;
+}
+
+.contact-container {
+  position: absolute;
+  left: -155px;
+  top: 90px;
+
+  fill: #333333;
+}
+
 /* Custom Radio Buttons */
 .container {
   display: block;
