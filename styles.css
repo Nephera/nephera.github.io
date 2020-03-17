@@ -31,11 +31,6 @@ body {
 
 }
 
-/* div:hover svg path, div:hover {
-  fill:red;
-  color:red;
-} */
-
 .navigation-container-wrapper {
   /* Center vertical/horizontal */
   position: absolute;
@@ -46,6 +41,43 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.button-bg {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: solid 3px #333333;
+}
+
+.portfolio-button {
+  position: absolute;
+  left: -150px;
+  top: -110px;
+  width: 64px;
+  height: 64px;
+  transform: translate(-19px, -13px);
+}
+
+/* WIP */
+.blog-button {
+  position: absolute;
+  left: -150px;
+  top: -110px;
+  width: 64px;
+  height: 64px;
+  transform: translate(-90px, 85px);
+}
+
+/* WIP */
+.contact-button {
+  position: absolute;
+  left: -150px;
+  top: -110px;
+  width: 64px;
+  height: 64px;
+  transform: translate(-19px, 192px);
+}
+
 .navigation-container {
   position: absolute;
 }
@@ -54,15 +86,15 @@ body {
   position: absolute;
   left: -150px;
   top: -110px;
+  width: 64px;
+  height: 64px;
 
   fill: #333333;
 }
 
-.portfolio-container:hover svg path, .portfolio-container:hover {
-  fill: #9F9F9F;
-}
-
-.blog-container:hover svg path, .blog-container:hover {
+.portfolio-container:hover svg path, .portfolio-container:hover,
+.blog-container:hover svg path, .blog-container:hover,
+.contact-container:hover svg path, .contact-container:hover {
   fill: #9F9F9F;
 }
 
@@ -72,10 +104,6 @@ body {
   top: -10px;
 
   fill: #333333;
-}
-
-.contact-container:hover svg path, .contact-container:hover {
-  fill: #9F9F9F;
 }
 
 .contact-container {
