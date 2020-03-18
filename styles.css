@@ -338,8 +338,8 @@
 
   .portfolio-button {
     position: relative;
-    left: -25vw;
-    top: -18.3vw;
+    left: -19.3vw;
+    top: -1vw;
     width: 10.7vw;
     height: 10.7vw;
     max-width: 64px;
@@ -365,8 +365,8 @@
 
   .blog-button {
     position: relative;
-    left: calc(-150/600*100vw);
-    top: calc(-110/600*100vw);
+    left: -19.3vw;
+    top: -12.5vw;
     width: 10.7vw;
     height: 10.7vw;
     max-width: 64px;
@@ -392,8 +392,8 @@
 
   .contact-button {
     position: relative;
-    left: -25vw;
-    top: -18.3vw;
+    left: -19.3vw;
+    top: -24vw;
     width: 10.7vw;
     height: 10.7vw;
     max-width: 64px;
