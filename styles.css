@@ -344,6 +344,7 @@
     height: 10.7vw;
     max-width: 64px;
     max-height: 64px;
+    -ms-transform: translate(calc(-19/600*100vw), calc(-13/600*100vw));
     transform: translate(calc(-19/600*100vw), calc(-13/600*100vw)); 
   }
 
@@ -370,6 +371,7 @@
     height: 10.7vw;
     max-width: 64px;
     max-height: 64px;
+    -ms-transform: translate(calc(-90/600*100vw), calc(85/600*100vw));
     transform: translate(calc(-90/600*100vw), calc(85/600*100vw));
   }
 
@@ -396,6 +398,7 @@
     height: 10.7vw;
     max-width: 64px;
     max-height: 64px;
+    -ms-transform: translate(calc(-19/600*100vw), calc(192/600*100vw));
     transform: translate(calc(-19/600*100vw), calc(192/600*100vw)); 
   }
 
@@ -500,8 +503,8 @@
     margin: 0;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-45%, -50%);
-    transform: translate(-45%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 
   .radio-container {
