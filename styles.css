@@ -9,243 +9,586 @@
     #F6953B Neon Orange
 */
 
-html {
-  height: 100%;
+/* If the screen size is 601px wide or more (Tablets+) */
+@media screen and (min-width: 600px) {
+  html {
+    height: 100%;
+  }
+
+  body {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    
+    color: #9F9F9F;
+    font-family: 'Montserrat';
+    font-size: 16px;
+
+    /* Monogram */
+    background-color: #0F0F0F;
+    background-image: url(https://imagizer.imageshack.com/v2/xq90/924/ebaadZ.png);
+    background-repeat: no-repeat;
+    background-blend-mode: color-dodge;
+    background-size: 480px;
+    background-position: center;
+  }
+
+  .navigation-container-wrapper {
+    /* Center vertical/horizontal */
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .button-bg {
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: solid 3px #333333;
+  }
+
+  .portfolio-button {
+    position: absolute;
+    left: -150px;
+    top: -110px;
+    width: 64px;
+    height: 64px;
+    transform: translate(-19px, -13px);
+  }
+
+  .blog-button {
+    position: absolute;
+    left: -150px;
+    top: -110px;
+    width: 64px;
+    height: 64px;
+    transform: translate(-90px, 85px);
+  }
+
+  .contact-button {
+    position: absolute;
+    left: -150px;
+    top: -110px;
+    width: 64px;
+    height: 64px;
+    transform: translate(-19px, 192px);
+  }
+
+  .navigation-container {
+    position: absolute;
+  }
+
+  .portfolio-button:hover svg path, .portfolio-button:hover,
+  .blog-button:hover svg path, .blog-button:hover,
+  .contact-button:hover svg path, .contact-button:hover,
+  .portfolio-container:hover svg path, .portfolio-container:hover,
+  .blog-container:hover svg path, .blog-container:hover,
+  .contact-container:hover svg path, .contact-container:hover {
+    fill: #9F9F9F;
+  }
+
+  #portfolio:hover,
+  #blog:hover,
+  #contact:hover {
+    border: solid 3px #9F9F9F;
+  }
+
+  .portfolio-container {
+    position: absolute;
+    left: 16px;
+    top: 10px;
+    width: 64px;
+    height: 64px;
+
+    fill: #333333;
+  }
+
+  .blog-container {
+    position: absolute;
+    left: 18px;
+    top: 10px;
+
+    fill: #333333;
+  }
+
+  .contact-container {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+
+    fill: #333333;
+  }
+
+  /* Custom Radio Buttons */
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    /* margin-bottom: 12px; */
+    margin: 0px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #333333;
+    border-radius: 50%;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #9F9F9F;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #3FF63B;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #0F0F0F;
+  }
+
+  .radio-container-wrapper {
+    /* Center vertical/horizontal */
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .radio-container {
+    position: relative;
+    display: inline-block;
+    width: 50vw;
+    max-width: 17em;
+    height: 5em;
+  }
+
+  .radio-left {
+    position: absolute;
+    left: 0em;
+    top: -1em;
+    font-size: 64px;
+  }
+
+  .radio-top {
+    position: absolute;
+    left: .8em;
+    top: -.6em;
+    font-size: 24px;
+  }
+
+  .radio-bottom {
+    position: absolute;
+    left: .57em;
+    top: -.05em;
+    font-size: 32px;
+  }
+
+  #radio-text-david,
+  #radio-text-design {
+    color: #3FF63B;
+  }
+
+  #radio-text-dev,
+  #radio-text-teaching {
+    color: #F6953B;
+  }
+
+  #radio-text-entre,
+  #radio-text-motorcycles {
+    color: #F6EE3B;
+  }
+
+  #radio-text-code,
+  #radio-text-gaming {
+    color: #3BF6EA;
+  }
+
+  #radio1 {
+    top: 72px; 
+    left: 5px;
+  }
+
+  #radio2 {
+    top: 72px; 
+    left: 35px;
+  }
+
+  #radio3 {
+    top: 72px; 
+    left: 65px;
+  }
+
+  #radio4 {
+    top: 72px; 
+    left: 95px;
+  }
+
+  #radio5 {
+    top: 72px; 
+    left: 125px;
+  }
+
+  #radio6 {
+    top: 72px; 
+    left: 155px;
+  }
+
+  #radio7 {
+    top: 72px; 
+    left: 185px;
+  }
+
+  #radio8 {
+    top: 72px; 
+    left: 215px;
+  }
 }
 
-body {
-  position: relative;
-  min-height: 100%;
-  margin: 0;
-  
-  color: #9F9F9F;
-  font-family: 'Montserrat';
-  font-size: 16px;
 
-  /* Monogram */
-  background-color: #0F0F0F;
-  background-image: url(https://imagizer.imageshack.com/v2/xq90/924/ebaadZ.png);
-  background-repeat: no-repeat;
-  background-blend-mode: color-dodge;
-  background-size: 40%;
-  background-position: center;
-}
 
-.navigation-container-wrapper {
-  /* Center vertical/horizontal */
-  position: absolute;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
+/* If the screen size is 600px wide or less (Mobile) */
+@media screen and (max-width: 600px) {
+  html {
+    height: 100%;
+  }
 
-.button-bg {
-  background: rgba(0, 0, 0, 0.35);
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  border: solid 3px #333333;
-}
+  body {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    
+    color: #9F9F9F;
+    font-family: 'Montserrat';
+    font-size: 2.6667vw;
 
-.portfolio-button {
-  position: absolute;
-  left: -150px;
-  top: -110px;
-  width: 64px;
-  height: 64px;
-  transform: translate(-19px, -13px);
-}
+    /* Monogram */
+    background-color: #0F0F0F;
+    background-image: url(https://imagizer.imageshack.com/v2/xq90/924/ebaadZ.png);
+    background-repeat: no-repeat;
+    background-blend-mode: color-dodge;
+    background-size: 80vw;
+    background-position: center;
+  }
 
-.blog-button {
-  position: absolute;
-  left: -150px;
-  top: -110px;
-  width: 64px;
-  height: 64px;
-  transform: translate(-90px, 85px);
-}
+  .navigation-container-wrapper {
+    /* Center vertical/horizontal */
+    position: absolute;
+    margin: 0;
+    top: 50vh;
+    left: 50vw;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 
-.contact-button {
-  position: absolute;
-  left: -150px;
-  top: -110px;
-  width: 64px;
-  height: 64px;
-  transform: translate(-19px, 192px);
-}
+  .navigation-container {
+    position: absolute;
+  }
 
-.navigation-container {
-  position: absolute;
-}
+  .button-bg {
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: solid .5vw #333333;
+  }
 
-.portfolio-button:hover svg path, .portfolio-button:hover,
-.blog-button:hover svg path, .blog-button:hover,
-.contact-button:hover svg path, .contact-button:hover,
-.portfolio-container:hover svg path, .portfolio-container:hover,
-.blog-container:hover svg path, .blog-container:hover,
-.contact-container:hover svg path, .contact-container:hover {
-  fill: #9F9F9F;
-}
+  .portfolio-button {
+    position: absolute;
+    left: -25vw;
+    top: -18.3vw;
+    width: 10.7vw;
+    height: 10.7vw;
+    max-width: 64px;
+    max-height: 64px;
+    transform: translate(calc(-19/600*100vw), calc(-13/600*100vw)); 
+  }
 
-#portfolio:hover,
-#blog:hover,
-#contact:hover {
-  border: solid 3px #9F9F9F;
-}
+  .portfolio-container {
+    position: absolute;
+    left: calc(16/600*100vw);
+    top: calc(10/600*100vw);
 
-.portfolio-container {
-  position: absolute;
-  left: 16px;
-  top: 10px;
-  width: 64px;
-  height: 64px;
+    fill: #333333;
+  }
 
-  fill: #333333;
-}
+  .portfolio-container svg {
+    width: calc(32/600*100vw);
+    height: calc(41/600*100vw);
+    max-width: 32px;
+    max-height: 41px;
+  }
 
-.blog-container {
-  position: absolute;
-  left: 18px;
-  top: 10px;
+  .blog-button {
+    position: absolute;
+    left: calc(-150/600*100vw);
+    top: calc(-110/600*100vw);
+    width: 10.7vw;
+    height: 10.7vw;
+    max-width: 64px;
+    max-height: 64px;
+    transform: translate(calc(-90/600*100vw), calc(85/600*100vw));
+  }
 
-  fill: #333333;
-}
+  .blog-container {
+    position: absolute;
+    left: calc(18/600*100vw);
+    top: calc(10/600*100vw);
 
-.contact-container {
-  position: absolute;
-  left: 10px;
-  top: 5px;
+    fill: #333333;
+  }
 
-  fill: #333333;
-}
+  .blog-container svg {
+    width: calc(32/600*100vw);
+    height: calc(41/600*100vw);
+    max-width: 32px;
+    max-height: 41px;
+  }
 
-/* Custom Radio Buttons */
-.container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  /* margin-bottom: 12px; */
-  margin: 0px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+  .contact-button {
+    position: absolute;
+    left: -25vw;
+    top: -18.3vw;
+    width: 10.7vw;
+    height: 10.7vw;
+    max-width: 64px;
+    max-height: 64px;
+    transform: translate(calc(-19/600*100vw), calc(192/600*100vw)); 
+  }
 
-/* Hide the browser's default radio button */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
+  .contact-container {
+    position: absolute;
+    left: calc(10/600*100vw);
+    top: calc(5/600*100vw);
 
-/* Create a custom radio button */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #333333;
-  border-radius: 50%;
-}
+    fill: #333333;
+  }
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #9F9F9F;
-}
+  .contact-container svg {
+    width: calc(43/600*100vw);
+    height: calc(55/600*100vw);
+    max-width: 43px;
+    max-height: 55px;
+  }
 
-/* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #3FF63B;
-}
+  .portfolio-button:hover svg path, .portfolio-button:hover,
+  .blog-button:hover svg path, .blog-button:hover,
+  .contact-button:hover svg path, .contact-button:hover,
+  .portfolio-container:hover svg path, .portfolio-container:hover,
+  .blog-container:hover svg path, .blog-container:hover,
+  .contact-container:hover svg path, .contact-container:hover {
+    fill: #9F9F9F;
+  }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
+  #portfolio:hover,
+  #blog:hover,
+  #contact:hover {
+    border: solid 3px #9F9F9F;
+  }
 
-/* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
+  /* Custom Radio Buttons */
+  .container {
+    display: block;
+    position: relative;
+    padding-left: calc(35/600*100vw);
+    /* margin-bottom: 12px; */
+    margin: 0px;
+    cursor: pointer;
+    font-size: calc(22/600*100vw);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
-/* Style the indicator (dot/circle) */
-.container .checkmark:after {
- 	top: 4px;
-	left: 4px;
-	width: 17px;
-	height: 17px;
-	border-radius: 50%;
-	background: #0F0F0F;
-}
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
 
-.radio-container-wrapper {
-  /* Center vertical/horizontal */
-  position: absolute;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(25/600*100vw);
+    width: calc(25/600*100vw);
+    background-color: #333333;
+    border-radius: 50%;
+  }
 
-.radio-container {
-  position: relative;
-  display: inline-block;
-  width: 17em;
-  height: 5em;
-}
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #9F9F9F;
+  }
 
-.radio-left {
-  position: absolute;
-  left: 0em;
-  top: -1em;
-  font-size: 64px;
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #3FF63B;
+  }
 
-  /* border: solid 1px #0FF; */
-}
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
 
-.radio-top {
-  position: absolute;
-  left: .8em;
-  top: -.6em;
-  font-size: 24px;
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
 
-  /* border: solid 1px #F0F; */
-}
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    top: calc(4/600*100vw);
+    left: calc(4/600*100vw);
+    width: calc(17/600*100vw);
+    height: calc(17/600*100vw);
+    border-radius: 50%;
+    background: #0F0F0F;
+  }
 
-.radio-bottom {
-  position: absolute;
-  left: .57em;
-  top: -.05em;
-  font-size: 32px;
+  .radio-container-wrapper {
+    /* Center vertical/horizontal */
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-45%, -50%);
+    transform: translate(-45%, -50%);
+  }
 
-  /* border: solid 1px #FF0; */
-}
+  .radio-container {
+    position: relative;
+    display: inline-block;
+    width: 50vw;
+    height: 5em;
+  }
 
-#radio-text-david,
-#radio-text-design {
-  color: #3FF63B;
-}
+  .radio-left {
+    position: absolute;
+    left: 0em;
+    top: -1em;
+    font-size: calc(64/600*100vw);
+  }
 
-#radio-text-dev,
-#radio-text-teaching {
-  color: #F6953B;
-}
+  .radio-top {
+    position: absolute;
+    left: .8em;
+    top: -.6em;
+    font-size: calc(24/600*100vw);
+  }
 
-#radio-text-entre,
-#radio-text-motorcycles {
-  color: #F6EE3B;
-}
+  .radio-bottom {
+    position: absolute;
+    left: .57em;
+    top: -.05em;
+    font-size: calc(32/600*100vw);
+  }
 
-#radio-text-code,
-#radio-text-gaming {
-  color: #3BF6EA;
+  #radio-text-david,
+  #radio-text-design {
+    color: #3FF63B;
+  }
+
+  #radio-text-dev,
+  #radio-text-teaching {
+    color: #F6953B;
+  }
+
+  #radio-text-entre,
+  #radio-text-motorcycles {
+    color: #F6EE3B;
+  }
+
+  #radio-text-code,
+  #radio-text-gaming {
+    color: #3BF6EA;
+  }
+
+  #radio1 {
+    top: calc(72/600*100vw); 
+    left: calc(5/600*100vw);
+  }
+
+  #radio2 {
+    top: calc(72/600*100vw); 
+    left: calc(35/600*100vw);
+  }
+
+  #radio3 {
+    top: calc(72/600*100vw); 
+    left: calc(65/600*100vw);
+  }
+
+  #radio4 {
+    top: calc(72/600*100vw); 
+    left: calc(95/600*100vw);
+  }
+
+  #radio5 {
+    top: calc(72/600*100vw); 
+    left: calc(125/600*100vw);
+  }
+
+  #radio6 {
+    top: calc(72/600*100vw); 
+    left: calc(155/600*100vw);
+  }
+
+  #radio7 {
+    top: calc(72/600*100vw); 
+    left: calc(185/600*100vw);
+  }
+
+  #radio8 {
+    top: calc(72/600*100vw); 
+    left: calc(215/600*100vw);
+  }
 }
