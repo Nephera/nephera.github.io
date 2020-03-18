@@ -1,4 +1,4 @@
-/*
+/* 
   Colors:
     #707070 Standard Gray
     #3FF63B Neon Green
@@ -98,8 +98,8 @@
   }
 
   .portfolio-container {
-    position: absolute;
-    left: 16px;
+    position: relative;
+    left: 16px; 
     top: 10px;
     width: 64px;
     height: 64px;
@@ -108,7 +108,7 @@
   }
 
   .blog-container {
-    position: absolute;
+    position: relative;
     left: 18px;
     top: 10px;
 
@@ -116,7 +116,7 @@
   }
 
   .contact-container {
-    position: absolute;
+    position: relative;
     left: 10px;
     top: 5px;
 
@@ -318,14 +318,14 @@
     /* Center vertical/horizontal */
     position: absolute;
     margin: 0;
-    top: 50vh;
-    left: 50vw;
+    top: 50%;
+    left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
 
   .navigation-container {
-    position: absolute;
+    position: relative;
   }
 
   .button-bg {
@@ -337,7 +337,7 @@
   }
 
   .portfolio-button {
-    position: absolute;
+    position: relative;
     left: -25vw;
     top: -18.3vw;
     width: 10.7vw;
@@ -349,7 +349,7 @@
   }
 
   .portfolio-container {
-    position: absolute;
+    position: relative;
     left: calc(16/600*100vw);
     top: calc(10/600*100vw);
 
@@ -364,7 +364,7 @@
   }
 
   .blog-button {
-    position: absolute;
+    position: relative;
     left: calc(-150/600*100vw);
     top: calc(-110/600*100vw);
     width: 10.7vw;
@@ -376,7 +376,7 @@
   }
 
   .blog-container {
-    position: absolute;
+    position: relative;
     left: calc(18/600*100vw);
     top: calc(10/600*100vw);
 
@@ -391,7 +391,7 @@
   }
 
   .contact-button {
-    position: absolute;
+    position: relative;
     left: -25vw;
     top: -18.3vw;
     width: 10.7vw;
@@ -403,7 +403,7 @@
   }
 
   .contact-container {
-    position: absolute;
+    position: relative;
     left: calc(10/600*100vw);
     top: calc(5/600*100vw);
 
