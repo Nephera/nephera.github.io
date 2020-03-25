@@ -26,9 +26,15 @@ body {
   background-color: var(--bg-gray);
   background-image: url(https://imagizer.imageshack.com/v2/xq90/924/ebaadZ.png);
   background-repeat: no-repeat;
-  background-blend-mode: color-dodge;
+  background-blend-mode: screen;
   background-size: 540px;
   background-position: center;
+}
+
+.main-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, .84);
 }
 
 .navigation-container-wrapper {
@@ -42,7 +48,11 @@ body {
 }
 
 .navigation-container {
-  position: absolute;
+  position: relative;
+  height: 50vw;
+  width: 50vw;
+  max-height: 260px;
+  max-width: 300px;
 }
 
 .button-bg {
@@ -54,12 +64,12 @@ body {
 }
 
 .portfolio-button {
-  position: relative;
-  left: -150px;
-  top: -110px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
   width: 64px;
   height: 64px;
-  transform: translate(-19px, -13px);
+  z-index: 1;
 }
 
 .portfolio-container {
@@ -80,12 +90,12 @@ body {
 }
 
 .blog-button {
-  position: relative;
-  left: -150px;
-  top: -110px;
+  position: absolute;
+  left: -25%;
+  top: calc(50% - 35px); /* -35px = -(half of height + 3px for border) */
   width: 64px;
   height: 64px;
-  transform: translate(-90px, 15px);
+  z-index: 1;
 }
 
 .blog-container {
@@ -104,12 +114,12 @@ body {
 }
 
 .contact-button {
-  position: relative;
-  left: -150px;
-  top: -110px;
+  position: absolute;
+  left: 0px;
+  bottom: 0%;
   width: 64px;
   height: 64px;
-  transform: translate(-19px, 43px);
+  z-index: 1;
 }
 
 .contact-container {
@@ -130,25 +140,25 @@ body {
 .portfolio-button:hover svg path, .portfolio-button:hover,
 .blog-button:hover svg path, .blog-button:hover,
 .contact-button:hover svg path, .contact-button:hover {
-  fill: #9F9F9F;
+  fill: var(--attention-gray);
 }
 
 .portfolio-button:active svg path, .portfolio-button:active,
 .blog-button:active svg path, .blog-button:active,
 .contact-button:active svg path, .contact-button:active {
-  fill: #FFF;
+  fill: white;
 }
 
 #portfolio:hover,
 #blog:hover,
 #contact:hover {
-  border: solid 3px #9F9F9F;
+  border: solid 3px var(--attention-gray);
 }
 
 #portfolio:active,
 #blog:active,
 #contact:active {
-  border: solid 3px #3FF63B;
+  border: solid 3px var(--neon-green);
 }
 
 /* Custom Radio Buttons */
@@ -179,7 +189,7 @@ body {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #333333;
+  background-color: var(--option-gray);
   border-radius: 50%;
 }
 
@@ -216,39 +226,46 @@ body {
 .radio-container-wrapper {
   /* Center vertical/horizontal */
   position: absolute;
-  margin: 0;
+  margin: 0px;
+  line-height: 0;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
+  height: calc(102/600*100vw);
+  width: calc(300/600*100vw);
+  max-height: 102px;
+  max-width: 300px;
   transform: translate(-50%, -50%);
 }
 
 .radio-container {
   position: relative;
   display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  top: -8%;
+  left: 10%;
   width: 50vw;
   max-width: 17em;
-  height: 5em;
 }
 
 .radio-left {
   position: absolute;
   left: 0em;
-  top: -1em;
+  top: -.45em;
   font-size: 4em;
 }
 
 .radio-top {
   position: absolute;
   left: .8em;
-  top: -.6em;
+  top: -.15em;
   font-size: 1.5em
 }
 
 .radio-bottom {
   position: absolute;
   left: .57em;
-  top: -.05em;
+  top: .45em;
   font-size: 2em;
 }
 
@@ -314,43 +331,45 @@ body {
 
 @media screen and (max-width: 600px) {
   body {
-    font-size: 3.33vw;
+    font-size: 16px;
     background-size: 90vw;
-  }
-
-  .navigation-container {
-    position: relative;
   }
 
   .button-bg {
     border: solid calc(3/600*100vw) var(--option-gray);
   }
 
+  .navigation-container-wrapper {
+    height: calc(260/600*100vw);
+  }
+
   .portfolio-button {
-    left: -19.3vw;
-    top: -1vw;
+    left: 3vw;
+    top: 0vw;
     width: 10.7vw;
     height: 10.7vw;
     max-width: 64px;
     max-height: 64px;
-    -ms-transform: translate(calc(-19/600*100vw), calc(-13/600*100vw));
-    transform: translate(calc(-19/600*100vw), calc(-13/600*100vw)); 
+    -ms-transform: translate(calc(-19/600*100vw), 0vh);
+    transform: translate(calc(-19/600*100vw), 0vh);
   }
 
   .portfolio-container {
-    left: calc(16/600*100vw);
-    top: calc(10/600*100vw);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10.7vw;
+    height: 10.7vw;
+    transform: translate(calc(16/600*100vw), calc(12/600*100vw));
   }
 
   .blog-button {
-    left: -19.3vw;
-    top: -12.5vw;
+    left: -12.5vw;
+    top: 16vw;
     width: 10.7vw;
     height: 10.7vw;
     max-width: 64px;
     max-height: 64px;
-    -ms-transform: translate(calc(-90/600*100vw), calc(85/600*100vw));
-    transform: translate(calc(-90/600*100vw), calc(85/600*100vw));
   }
 
   .blog-container {
@@ -359,14 +378,14 @@ body {
   }
 
   .contact-button {
-    left: -19.3vw;
-    top: -24vw;
+    left: 3vw;
+    top: 32vw;
     width: 10.7vw;
     height: 10.7vw;
     max-width: 64px;
     max-height: 64px;
-    -ms-transform: translate(calc(-19/600*100vw), calc(192/600*100vw));
-    transform: translate(calc(-19/600*100vw), calc(192/600*100vw)); 
+    -ms-transform: translate(calc(-19/600*100vw), 0vh);
+    transform: translate(calc(-19/600*100vw), 0vh);
   }
 
   .contact-container {
@@ -408,64 +427,55 @@ body {
     background: var(--bg-gray);
   }
 
-  #radio1 {
-    top: calc(72/600*100vw); 
-    left: calc(5/600*100vw);
-  }
-
-  #radio2 {
-    top: calc(72/600*100vw); 
-    left: calc(35/600*100vw);
-  }
-
-  #radio3 {
-    top: calc(72/600*100vw); 
-    left: calc(65/600*100vw);
-  }
-
-  #radio4 {
-    top: calc(72/600*100vw); 
-    left: calc(95/600*100vw);
-  }
-
-  #radio5 {
-    top: calc(72/600*100vw); 
-    left: calc(125/600*100vw);
-  }
-
-  #radio6 {
-    top: calc(72/600*100vw); 
-    left: calc(155/600*100vw);
-  }
-
-  #radio7 {
-    top: calc(72/600*100vw); 
-    left: calc(185/600*100vw);
-  }
-
-  #radio8 {
-    top: calc(72/600*100vw); 
-    left: calc(215/600*100vw);
-  }
-
   .radio-left {
-    position: absolute;
-    left: 0em;
-    top: -1em;
     font-size: calc(64/600*100vw);
   }
 
   .radio-top {
-    position: absolute;
-    left: .8em;
-    top: -.6em;
     font-size: calc(24/600*100vw);
   }
 
   .radio-bottom {
-    position: absolute;
-    left: .57em;
-    top: -.05em;
     font-size: calc(32/600*100vw);
+  }
+  
+  #radio1 {
+    top: calc(72/600*100vw);
+    left: calc(5/600*100vw);
+  }
+
+  #radio2 {
+    top: calc(72/600*100vw);
+    left: calc(35/600*100vw);
+  }
+
+  #radio3 {
+    top: calc(72/600*100vw);
+    left: calc(65/600*100vw);
+  }
+
+  #radio4 {
+    top: calc(72/600*100vw);
+    left: calc(95/600*100vw);
+  }
+
+  #radio5 {
+    top: calc(72/600*100vw);
+    left: calc(125/600*100vw);
+  }
+
+  #radio6 {
+    top: calc(72/600*100vw);
+    left: calc(155/600*100vw);
+  }
+
+  #radio7 {
+    top: calc(72/600*100vw);
+    left: calc(185/600*100vw);
+  }
+
+  #radio8 {
+    top: calc(72/600*100vw);
+    left: calc(215/600*100vw);
   }
 }
