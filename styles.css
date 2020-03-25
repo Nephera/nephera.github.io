@@ -10,12 +10,14 @@ html {
   --neon-yellow: #F6EE3B;
   --neon-orange: #F6953B;
 
-  height: 100%;  
+  height: 100%;
+  width: 100%;
 }
 
 body {
   position: relative;
   min-height: 100%;
+  width: 100%;
   margin: 0;
   
   color: var(--attention-gray);
@@ -27,12 +29,14 @@ body {
   background-image: url(https://imagizer.imageshack.com/v2/xq90/924/ebaadZ.png);
   background-repeat: no-repeat;
   background-blend-mode: screen;
-  background-size: 540px;
+  background-size: 700px;
   background-position: center;
 }
 
 .main-wrapper {
+  min-height: 100%;
   height: 100vh;
+  min-width: 100%;
   width: 100vw;
   background-color: rgba(0, 0, 0, .84);
 }
@@ -332,7 +336,7 @@ body {
 @media screen and (max-width: 600px) {
   body {
     font-size: 16px;
-    background-size: 90vw;
+    background-size: auto;
   }
 
   .button-bg {
