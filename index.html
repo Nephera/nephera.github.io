@@ -8,17 +8,23 @@
   <meta property="og:description" content="This is my digital portfolio and blog for programming and gaming.  I am passionate about sharing knowledge learned the hard way." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nephera.github.io" />
-  <meta property="og:image" content="https://imagizer.imageshack.com/img921/7761/1qK65g.png" />
+  <meta property="og:image" content="DRCircleBlue.png" />
   
   <title>David Ray's Portfolio and Blog</title>
   <link rel="stylesheet" type="text/css" href="./styles.css">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+  <script>
+    function toggleVisible(i) { 
+      document.getElementById(i).style.display == 'inline' ? document.getElementById(i).style.display='none' : document.getElementById(i).style.display='inline';
+    }
+  </script>
 </head>
 <body>
   <div class="main-wrapper">
     <div class="navigation-container-wrapper">
       <div class="navigation-container">
-        <div class="portfolio-button button-bg" id="portfolio">
+        <div class="portfolio-button button-bg" id="portfolio" onclick="toggleVisible('portfolio-slideout')">
           <div class="portfolio-container">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           width="32px" height="41px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
@@ -36,7 +42,19 @@
             </svg>
           </div>
         </div>
-        <div class="blog-button button-bg" id="blog">
+        <div class="portfolio-slideout" id="portfolio-slideout">
+          <div class="ffr-button button-bg" id="ffr" onclick="location.href='https:/\/www.ffrecruiter.com\/';">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="93.465px" height="120.208px" viewBox="0 0 93.465 120.208" enable-background="new 0 0 93.465 120.208" xml:space="preserve">
+              <g><path id="FF" d="M0.608,0.5l75.173,0.044L63.678,19.744H44.641l-5.462,26.837l13.226,0.044 l-11.38,19.281l-5.983,0.005l-11.35,53.794l-21.3-0.181l11.34-53.82l-7.075-0.019L4.611,46.504l13.145,0.12l5.587-26.705 L4.431,19.924L0.608,0.5z"/>
+	              <path id="R" d="M80.15,2.944l-11.699,18.36c0,0,14.799,15-9.562,25.439 C51.81,59.104,47.885,65.87,47.885,65.87L53.91,119.5h24.794L66.106,65.908C97.789,46.625,100.064,17.229,80.15,2.944z"/></g>
+            </svg>
+            <div class="ffr-button-icon"></div>
+          </div>
+          <div class="github-button button-bg" id="github" onclick="location.href='https:/\/\/www.github.com\/nephera';">
+            <svg height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+          </div>
+        </div>
+        <div class="blog-button button-bg" id="blog" onclick="location.href='blog.html';">
           <div class="blog-container">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="32px" height="41px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
@@ -66,7 +84,7 @@
             </svg>
           </div>
         </div>
-        <div class="contact-button button-bg" id="contact">
+        <div class="contact-button button-bg" id="contact" onclick="toggleVisible('contact-slideout')">
           <div class="contact-container">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           width="43px" height="55px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
@@ -79,6 +97,8 @@
               </g>
             </svg>
           </div>
+        </div>
+        <div class="contact-slideout" id="contact-slideout">
         </div>
       </div>
     </div>
@@ -99,13 +119,13 @@
         <p class="radio-bottom" id="radio-text-gaming" style="display:none;">Gaming</p>
 
         <label class="container" id="radio1"><input type="radio" checked="checked" name="radio"><span class="checkmark"></span></label>
-        <label class="container" id="radio2"><input type="radio" name="radio"><span class="checkmark"></span></label>
+        <!--<label class="container" id="radio2"><input type="radio" name="radio"><span class="checkmark"></span></label>
         <label class="container" id="radio3"><input type="radio" name="radio"><span class="checkmark"></span></label>
         <label class="container" id="radio4"><input type="radio" name="radio"><span class="checkmark"></span></label>
         <label class="container" id="radio5"><input type="radio" name="radio"><span class="checkmark"></span></label>
         <label class="container" id="radio6"><input type="radio" name="radio"><span class="checkmark"></span></label>
         <label class="container" id="radio7"><input type="radio" name="radio"><span class="checkmark"></span></label>
-        <label class="container" id="radio8"><input type="radio" name="radio"><span class="checkmark"></span></label>
+        <label class="container" id="radio8"><input type="radio" name="radio"><span class="checkmark"></span></label> -->
       </div>
     </div>  
   </div>

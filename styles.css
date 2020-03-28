@@ -14,10 +14,15 @@ html {
   width: 100%;
 }
 
+html, body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 body {
   position: relative;
   min-height: 100%;
-  width: 100%;
+  width: 100vw;
   margin: 0;
   
   color: var(--attention-gray);
@@ -65,6 +70,7 @@ body {
   width: 100px;
   height: 100px;
   border: solid 3px var(--option-gray);
+  cursor: pointer;
 }
 
 .portfolio-button {
@@ -91,6 +97,71 @@ body {
   height: calc(41/600*100vw);
   max-width: 32px;
   max-height: 41px;
+}
+
+.portfolio-slideout {
+  display: none;
+  position: absolute;
+  height: 10px;
+  width: 90%;
+  left: 22.5%;
+  top: 10%;
+  border: 3px solid var(--attention-gray);
+  border-left: none;
+  border-radius: 0px 10px 10px 0px;
+  background-color: rgba(0, 0, 0, 0.35);
+  animation: slideoutAnimation 1s forwards 0s ease-out;
+}
+
+@keyframes slideoutAnimation{
+  0%{
+    opacity: 0;
+    width: 0;
+  }
+  100%{
+    opacity: 1;
+    width: 90%;
+  }
+}
+
+/* Needs to be responsive */
+.ffr-button {
+  position: absolute;
+  left: 5%;
+  top: -23px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Needs to be responsive */
+.ffr-button svg {
+  position: absolute;
+  left: -20px;
+  top: 6px;
+  height: 36px;
+  fill: var(--option-gray);
+}
+
+/* Needs to be responsive */
+.github-button {
+  position: absolute;
+  left: 30%;
+  top: -23px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Needs to be responsive */
+.github-button svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--option-gray);
+  height: 36px;
+  width: 36px;
 }
 
 .blog-button {
@@ -141,25 +212,43 @@ body {
   max-height: 55px;
 }
 
-.portfolio-button:hover svg path, .portfolio-button:hover,
+.contact-slideout {
+  display: none;
+  position: absolute;
+  height: 10px;
+  width: 90%;
+  left: 22.5%;
+  bottom: 10%;
+  border: 3px solid var(--attention-gray);
+  border-left: none;
+  border-radius: 0px 10px 10px 0px;
+  background-color: rgba(0, 0, 0, 0.35);
+  animation: slideoutAnimation 1s forwards 0s ease-out;
+}
+
+.portfolio-button:hover svg path, .portfolio-button:hover, 
+.ffr-button:hover svg path, .ffr-button:hover,
+.github-button:hover svg path, .github-button:hover,
 .blog-button:hover svg path, .blog-button:hover,
 .contact-button:hover svg path, .contact-button:hover {
   fill: var(--attention-gray);
 }
 
-.portfolio-button:active svg path, .portfolio-button:active,
+.portfolio-button:active svg path, .portfolio-button:active, 
+.ffr-button:active svg path,
+.github-button:active svg path,
 .blog-button:active svg path, .blog-button:active,
 .contact-button:active svg path, .contact-button:active {
   fill: white;
 }
 
-#portfolio:hover,
+#portfolio:hover, .ffr-button:hover, .github-button:hover,
 #blog:hover,
 #contact:hover {
   border: solid 3px var(--attention-gray);
 }
 
-#portfolio:active,
+#portfolio:active, .ffr-button:active, .github-button:active,
 #blog:active,
 #contact:active {
   border: solid 3px var(--neon-green);
@@ -333,7 +422,8 @@ body {
   left: 215px;
 }
 
-@media screen and (max-width: 600px) {
+/* Mobile Landscape */
+@media only screen and (max-width: 1024px) {
   body {
     font-size: 16px;
     background-size: auto;
@@ -342,9 +432,9 @@ body {
 
   .main-wrapper {
     min-height: 100%;
-    height: 2000vh;
+    height: 100%;
     min-width: 100%;
-    width: 2000vw;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0);
   }
 
@@ -491,4 +581,8 @@ body {
     top: calc(72/600*100vw);
     left: calc(215/600*100vw);
   }
+}
+
+/* Mobile Portrait */
+@media only screen and (max-width: 768px) {
 }
