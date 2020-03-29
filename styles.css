@@ -106,7 +106,7 @@ body {
   width: 90%;
   left: 22.5%;
   top: 10%;
-  border: 3px solid var(--attention-gray);
+  border: 3px solid var(--option-gray);
   border-left: none;
   border-radius: 0px 10px 10px 0px;
   background-color: rgba(0, 0, 0, 0.35);
@@ -140,7 +140,9 @@ body {
   left: -20px;
   top: 6px;
   height: 36px;
-  fill: var(--option-gray);
+  fill: transparent;
+  stroke: var(--option-gray);
+  stroke-width: 6px;
 }
 
 /* Needs to be responsive */
@@ -219,7 +221,7 @@ body {
   width: 90%;
   left: 22.5%;
   bottom: 10%;
-  border: 3px solid var(--attention-gray);
+  border: 3px solid var(--option-gray);
   border-left: none;
   border-radius: 0px 10px 10px 0px;
   background-color: rgba(0, 0, 0, 0.35);
@@ -232,6 +234,7 @@ body {
 .blog-button:hover svg path, .blog-button:hover,
 .contact-button:hover svg path, .contact-button:hover {
   fill: var(--attention-gray);
+  stroke: none;
 }
 
 .portfolio-button:active svg path, .portfolio-button:active, 
@@ -341,85 +344,154 @@ body {
   max-width: 17em;
 }
 
-.radio-left {
+.radio-left-container {
   position: absolute;
+  width: 16px;
+  height: 4em;
   left: 0em;
-  top: -.45em;
+  top: -1.7em;
+}
+
+.radio-left {
   font-size: 4em;
+}
+
+.radio-top-container {
+  position: absolute;
+  left: 1.2em;
+  top: .6em;
+
+  width: 280px;
+  height: 1.5em;
+
+  overflow: hidden;
 }
 
 .radio-top {
   position: absolute;
-  left: .8em;
-  top: -.15em;
-  font-size: 1.5em
+  font-size: 1.5em;
+  top: -.5em;
+}
+
+.radio-bottom-container {
+  position: absolute;
+  left: 1.1em;
+  top: 2em;
+
+  width: 280px;
+  height: 2.5em;
+  
+  overflow: hidden;
 }
 
 .radio-bottom {
   position: absolute;
-  left: .57em;
-  top: .45em;
+  top: -.5em;
   font-size: 2em;
 }
 
-#radio-text-david,
-#radio-text-design {
+.radio-buttons-container {
+  position: absolute;
+  /* border: 1px solid #aaa; */
+  height: 26px;
+  width: 245px;
+  top: 72px;
+}
+
+#radio-text0,
+#radio-text4 {
   color: var(--neon-green);
 }
 
-#radio-text-dev,
-#radio-text-teaching {
+#radio-text1,
+#radio-text5 {
   color: var(--neon-orange);
 }
 
-#radio-text-entre,
-#radio-text-motorcycles {
+#radio-text2,
+#radio-text6 {
   color: var(--neon-yellow);
 }
 
-#radio-text-code,
-#radio-text-gaming {
+#radio-text3,
+#radio-text7 {
   color: var(--neon-blue);
 }
 
-#radio1 {
-  top: 72px; 
+#radio0 {
   left: 5px;
 }
 
-#radio2 {
-  top: 72px; 
+#radio1 { 
   left: 35px;
 }
 
-#radio3 {
-  top: 72px; 
+#radio2 {
   left: 65px;
 }
 
-#radio4 {
-  top: 72px; 
+#radio3 {
   left: 95px;
 }
 
-#radio5 {
-  top: 72px; 
+#radio4 { 
   left: 125px;
 }
 
-#radio6 {
-  top: 72px; 
+#radio5 {
   left: 155px;
 }
 
-#radio7 {
-  top: 72px; 
+#radio6 {
   left: 185px;
 }
 
-#radio8 {
-  top: 72px; 
+#radio7 { 
   left: 215px;
+}
+
+@keyframes textSlideAwayAnimation {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+    color: var(--neon-green);
+  }
+  100% {
+    transform: scale(.5) translateX(1500px);
+    opacity: 0;
+    color: #FFFFFF;
+  }
+}
+
+@keyframes textSlideInAnimation {
+  0% {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes topSlideAwayAnimation {
+  0% { 
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes topSlideInAnimation {
+  0% {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 /* Mobile Landscape */
