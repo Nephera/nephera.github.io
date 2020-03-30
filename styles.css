@@ -141,9 +141,7 @@ body {
   left: -20px;
   top: 6px;
   height: 36px;
-  fill: transparent;
-  stroke: var(--option-gray);
-  stroke-width: 6px;
+  fill: var(--option-gray);
 }
 
 /* Needs to be responsive */
@@ -229,11 +227,54 @@ body {
   animation: slideoutAnimation 1s forwards 0s ease-out;
 }
 
+/* Needs to be responsive */
+.email-button {
+  position: absolute;
+  left: 5%;
+  top: -23px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Needs to be responsive */
+.email-button svg {
+  position: absolute;
+  left: 8px;
+  top: 14px;
+  width: 35px;
+  height: 20px;
+  fill: var(--option-gray);
+}
+
+/* Needs to be responsive */
+.discord-button {
+  position: absolute;
+  left: 30%;
+  top: -23px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Needs to be responsive */
+.discord-button svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--option-gray);
+  height: 34px;
+  width: 34px;
+}
+
 .portfolio-button:hover svg path, .portfolio-button:hover, 
 .ffr-button:hover svg path, .ffr-button:hover,
 .github-button:hover svg path, .github-button:hover,
 .blog-button:hover svg path, .blog-button:hover,
-.contact-button:hover svg path, .contact-button:hover {
+.contact-button:hover svg path, .contact-button:hover,
+.email-button:hover svg path, .email-button:hover,
+.discord-button:hover svg path, .discord-button:hover {
   fill: var(--attention-gray);
   stroke: none;
 }
@@ -242,19 +283,21 @@ body {
 .ffr-button:active svg path,
 .github-button:active svg path,
 .blog-button:active svg path, .blog-button:active,
-.contact-button:active svg path, .contact-button:active {
+.contact-button:active svg path, .contact-button:active,
+.email-button:active svg path, .email-button:active,
+.discord-button:active svg path, .discord-button:active {
   fill: white;
 }
 
 #portfolio:hover, .ffr-button:hover, .github-button:hover,
 #blog:hover,
-#contact:hover {
+#contact:hover, .email-button:hover, .discord-button:hover {
   border: solid 3px var(--attention-gray);
 }
 
 #portfolio:active, .ffr-button:active, .github-button:active,
 #blog:active,
-#contact:active {
+#contact:active, .email-button:active, .discord-button:active {
   border: solid 3px var(--neon-green);
 }
 
