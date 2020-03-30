@@ -298,7 +298,8 @@ body {
 #portfolio:active, .ffr-button:active, .github-button:active,
 #blog:active,
 #contact:active, .email-button:active, .discord-button:active {
-  border: solid 3px var(--neon-green);
+  /* border: solid 3px var(--neon-green); */
+  border: solid 3px var(--radio-color);
 }
 
 /* Custom Radio Buttons */
