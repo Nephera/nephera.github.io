@@ -38,8 +38,32 @@
           }
         }
       }
-
       document.getElementsByName("radio" + i)[0].checked = true;
+
+      var radioColorNum = i % 4;
+      let root = document.documentElement;
+      switch(radioColorNum){
+        case 0:
+          root.style.setProperty('--radio-color', 'var(--neon-green)');
+          break;
+
+        case 1:
+          root.style.setProperty('--radio-color', 'var(--neon-orange)');
+          break;
+
+        case 2:
+          root.style.setProperty('--radio-color', 'var(--neon-yellow)');
+          break;
+
+        case 3:
+          root.style.setProperty('--radio-color', 'var(--neon-blue)');
+          break;
+
+        default:
+          root.style.setProperty('--radio-color', '#FF0000');
+      }
+
+      
       document.getElementById("radio-text" + i).style.animation = "textSlideInAnimation .25s forwards";
       document.getElementById("radio-text" + i).style.display = "inline";
 
@@ -169,14 +193,14 @@
           <p class="radio-bottom" id="radio-text7" style="display:none;">Gaming</p>
         </div>
         <div class="radio-buttons-container">
-          <label class="container" id="radio0"><input type="radio" onclick="radioClick(0)" checked="checked" name="radio0"><span class="checkmark"></span></label>
-          <label class="container" id="radio1"><input type="radio" onclick="radioClick(1)" name="radio1"><span class="checkmark"></span></label>
-          <label class="container" id="radio2"><input type="radio" onclick="radioClick(2)" name="radio2"><span class="checkmark"></span></label>
-          <label class="container" id="radio3"><input type="radio" onclick="radioClick(3)" name="radio3"><span class="checkmark"></span></label>
-          <label class="container" id="radio4"><input type="radio" onclick="radioClick(4)" name="radio4"><span class="checkmark"></span></label>
-          <label class="container" id="radio5"><input type="radio" onclick="radioClick(5)" name="radio5"><span class="checkmark"></span></label>
-          <label class="container" id="radio6"><input type="radio" onclick="radioClick(6)" name="radio6"><span class="checkmark"></span></label>
-          <label class="container" id="radio7"><input type="radio" onclick="radioClick(7)" name="radio7"><span class="checkmark"></span></label>
+          <label class="radio-button-container" id="radio0"><input type="radio" onclick="radioClick(0)" checked="checked" name="radio0"><span class="checkmark"></span></label>
+          <label class="radio-button-container" id="radio1"><input type="radio" onclick="radioClick(1)" name="radio1"><span class="checkmark"></span></label>
+          <label class="radio-button-container" id="radio2"><input type="radio" onclick="radioClick(2)" name="radio2"><span class="checkmark"></span></label>
+          <label class="radio-button-container" id="radio3"><input type="radio" onclick="radioClick(3)" name="radio3"><span class="checkmark"></span></label>
+          <label class="radio-button-container" id="radio4"><input type="radio" onclick="radioClick(4)" name="radio4"><span class="checkmark"></span></label>
+          <label class="radio-button-container" id="radio5"><input type="radio" onclick="radioClick(5)" name="radio5"><span class="checkmark"></span></label>
+          <label class="radio-button-container" id="radio6"><input type="radio" onclick="radioClick(6)" name="radio6"><span class="checkmark"></span></label>
+          <label class="radio-button-container" id="radio7"><input type="radio" onclick="radioClick(7)" name="radio7"><span class="checkmark"></span></label>
         </div>
       </div>
     </div>  

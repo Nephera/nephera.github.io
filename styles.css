@@ -9,6 +9,7 @@ html {
   --neon-red: #F63B3B;
   --neon-yellow: #F6EE3B;
   --neon-orange: #F6953B;
+  --radio-color: #3FF63B;
 
   height: 100%;
   width: 100%;
@@ -258,7 +259,7 @@ body {
 }
 
 /* Custom Radio Buttons */
-.container {
+.radio-button-container {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -272,7 +273,7 @@ body {
 }
 
 /* Hide the browser's default radio button */
-.container input {
+.radio-button-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -289,12 +290,12 @@ body {
   border-radius: 50%;
 }
 
-.container:hover input ~ .checkmark {
+.radio-button-container:hover input ~ .checkmark {
   background-color: var(--attention-gray);
 }
 
-.container input:checked ~ .checkmark {
-  background-color: var(--neon-green);
+.radio-button-container input:checked ~ .checkmark {
+  background-color: var(--radio-color);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -305,12 +306,12 @@ body {
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
+.radio-button-container input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.container .checkmark:after {
+.radio-button-container .checkmark:after {
   top: 4px;
   left: 4px;
   width: 17px;
