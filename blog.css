@@ -1,0 +1,10 @@
+.article {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  width: 95%;
+  margin-top: 10px;
+  border: 1px solid var(--option-gray);
+  background-color: rgba(0, 0, 0, .85);
+}
