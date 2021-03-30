@@ -29,7 +29,7 @@ Primary use:	HTML Theme
 
 3. Layout / #layout
 	3.1. Header / #header
-	3.2. Features / #features
+	3.2. The Second Plane / #story
 	3.3. Gallery / #gallery
 	3.4. Store / #store
 	3.5. Testimonials / #testimonials
@@ -139,7 +139,7 @@ h2, h3 {
   font-size: 130%;
   padding: 8px 16px; }
 
-.features-item .item-name-caption, .gallery-item .item-name-caption, .gallery-item .item-price-caption {
+.story-item .item-name-caption, .gallery-item .item-name-caption, .gallery-item .item-price-caption {
   border-radius: 5px;
   color: white;
   font-size: 80%;
@@ -596,42 +596,42 @@ header {
 /*------------------------------------------------------------------
 
 3. Layout / #layout
-    3.2. Features / #features
+    3.2. The Second Plane / #story
     
 -------------------------------------------------------------------*/
-.features {
+.story {
   padding-top: 20px; }
 
-.features-img {
+.story-img {
   width: 100%;
   border: 1px solid;
   opacity: 0.5;
   transition: all 0.5s;
   box-shadow: 0px 0px 25px 0px #000000; }
   @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (min-device-height: 1366px) and (max-device-height: 1366px) and (min-width: 1024px) and (max-width: 1024px) {
-    .features-img {
+    .story-img {
       opacity: 1; } }
   @media (max-width: 768px) {
-    .features-img {
+    .story-img {
       opacity: 1; } }
 
-.features-item .item-name-caption {
+.story-item .item-name-caption {
   background-color: #000000;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   top: 0;
   border-radius: 0px;
   left: 0;
   display: none; }
-.features-item:hover .features-img {
+.story-item:hover .story-img {
   opacity: 1;
   border: 1px solid #9d9280;
   box-shadow: 0px 0px 25px 0px #37271b; }
-.features-item:hover h3 {
+.story-item:hover h3 {
   text-shadow: 0px 0px 4px #383838; }
-.features-item:hover .features-p {
+.story-item:hover .story-p {
   color: #9d9280; }
 
-.features-p {
+.story-p {
   font-family: Helvetica, Arial, sans-serif;
   color: #71675b;
   font-size: 0.85em;
@@ -640,10 +640,10 @@ header {
   font-weight: 400;
   line-height: 1.4rem; }
   @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (min-device-height: 1366px) and (max-device-height: 1366px) and (min-width: 1024px) and (max-width: 1024px) {
-    .features-p {
+    .story-p {
       font-size: 0.8em; } }
   @media (max-width: 320px) {
-    .features-p {
+    .story-p {
       font-size: 0.9rem; } }
 
 h3 {
