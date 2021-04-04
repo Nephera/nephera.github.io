@@ -33,7 +33,7 @@ Primary use:	HTML Theme
 	3.3. Features / #features
 	3.4. Opportunities / #opportunities
 	3.5. Testimonials / #testimonials
-	3.6. Newsletter / #newsletter
+	3.6. Contact / #contact
 	3.7. Footer / #footer
 	3.8. YouTube  / #youtube
 
@@ -1185,19 +1185,19 @@ ul#model-feats {
 /*------------------------------------------------------------------
 
 3. Layout / #layout
-    3.6. Newsletter / #newsletter
+    3.6. Contact / #contact
 
 -------------------------------------------------------------------*/
-.newsletter {
+.contact {
   overflow-x: hidden;
   padding-top: 1rem;
   padding-bottom: 4rem; }
-  .newsletter h2 {
+  .contact h2 {
     margin-bottom: 1.25rem; }
-  .newsletter .section-description {
+  .contact .section-description {
     margin: 1rem auto 3rem auto; }
 
-.newsletter-form input {
+.contact-form input {
   border-radius: 0px;
   width: 100%;
   padding: 0.25rem;
@@ -1214,7 +1214,7 @@ ul#model-feats {
   border: 1px solid #62351f;
   border-top-color: #734a32;
   color: #ffcb8d; }
-.newsletter-form textarea {
+.contact-form textarea {
   border-radius: 0px;
   padding: 0.25rem;
   list-style: none;
@@ -1233,40 +1233,40 @@ ul#model-feats {
   min-height: 7rem;
   min-width: 11.5rem; }
   @media (max-width: 768px) {
-    .newsletter-form textarea {
+    .contact-form textarea {
       min-width: 100%; } }
   @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (min-device-height: 1366px) and (max-device-height: 1366px) and (min-width: 1024px) and (max-width: 1024px) {
-    .newsletter-form textarea {
+    .contact-form textarea {
       min-width: 100%; } }
-.newsletter-form .label-container {
+.contact-form .label-container {
   padding: 0 0 0.55rem 0; }
   @media (min-width: 992px) {
-    .newsletter-form .label-container {
+    .contact-form .label-container {
       text-align: right; } }
   @media (max-width: 768px) {
-    .newsletter-form .label-container {
+    .contact-form .label-container {
       text-align: right;
       width: 16.66666667%; } }
   @media (max-width: 480px) {
-    .newsletter-form .label-container {
+    .contact-form .label-container {
       text-align: left;
       width: 100%;
       padding-left: 3.666666667%; } }
 @media (max-width: 768px) {
-  .newsletter-form .button-submit {
+  .contact-form .button-submit {
     width: 16.66666667%; } }
-.newsletter-form label {
+.contact-form label {
   font-weight: 400;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 70%;
   color: #752b1a; }
-.newsletter-form #checkbox {
+.contact-form #checkbox {
   margin-top: 5px;
   padding: 0px; }
-.newsletter-form #newsletter {
+.contact-form #contact {
   width: 1rem;
   height: auto; }
-.newsletter-form .form-control {
+.contact-form .form-control {
   font-size: 80%;
   font-weight: 400;
   list-style: none;
@@ -1282,7 +1282,7 @@ ul#model-feats {
   border: 1px solid #62351f;
   border-top-color: #734a32;
   color: #ffcb8d; }
-.newsletter-form .row {
+.contact-form .row {
   padding: 0.25rem 0; }
 
 #gmaps {
