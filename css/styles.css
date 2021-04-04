@@ -531,7 +531,7 @@ a.navbar-logo {
 
 -------------------------------------------------------------------*/
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05)), url(../img/Dragonic.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05)), url(../img/HeaderBackground.jpg);
   box-shadow: inset 0 -10px 70px rgba(0, 0, 0, 0.75);
   height: 75vh;
   background-position: 75%; }
