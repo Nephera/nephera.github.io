@@ -64,19 +64,18 @@ $(document).ready(function() {
         var img = $('#showcase-img');
         var price = $('#modal-price-tag');
         var body = $('#modalBody');
-        var dataModel = $(this).find('img');
+        var dataModel = $(this).find('img');            
         var modelfeats = $('#model-feats').find('li');
 
         label.text('Hero Name: ' + $(this).find('.item-name-caption').text());
         price.text($(this).find('.item-price-caption').text());
         img.attr('src', dataModel.attr('src'));
 
-
-        $(modelfeats[0]).text('Strength: ' + dataModel.data('strength')); //Strength
-        $(modelfeats[1]).text('Dexterity: ' + dataModel.data('dexterity')); //Dexterity
-        $(modelfeats[2]).text('Agility: ' + dataModel.data('agility')); //Agility
-        $(modelfeats[3]).text('Willpower: ' + dataModel.data('willpower')); //Willpower
-        $(modelfeats[4]).text('Intelligence: ' + dataModel.data('intelligence')); //Intelligence
+        $(modelfeats[0]).text(dataModel.data('first'));
+        $(modelfeats[1]).text(dataModel.data('second'));
+        $(modelfeats[2]).text(dataModel.data('third'));
+        $(modelfeats[3]).text(dataModel.data('fourth'));
+        $(modelfeats[4]).text(dataModel.data('fifth'));
     });
 
     $('#shop-modal-hide').on('click', function(){
