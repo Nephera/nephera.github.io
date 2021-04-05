@@ -854,6 +854,13 @@ h3 {
     margin: 1rem auto 3rem auto; }
     .features h2 {
     margin-bottom: 40px; }
+    .features-item .item-name-caption {
+      background-color: #000000;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+      top: 0;
+      border-radius: 0px;
+      left: 0;
+      display: none; }
     .features #dragonic-carousel {
     border: 0;
     width: 100%; }
